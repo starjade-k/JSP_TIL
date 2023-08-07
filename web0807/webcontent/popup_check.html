@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload = "openPopup()">
+	<script>
+		function openPopup(){
+			var newWin = window.open("popup.html","pop","width=500, height=400");
+			if(newWin == null){
+				alert("팝입이 차단되어 있음");
+			}
+			newWin.moveBy(100,100);
+		}
+	</script>
+
+</body>
+</html>

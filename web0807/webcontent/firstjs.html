@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS</title>
+<style>
+	body{
+		text-align : center;
+		}
+</style>
+</head>
+<body>
+	<!--<h1>일기 작성하기 도전</h1>
+	<p><span calss = "accent" id = "result"></span>일 연속으로 <br>일기 작성</p>-->
+<script>
+	var num = prompt("전체 응모자 수"," ");
+	var choice = prompt("당첨자 수"," ");
+
+	document.write("전체 응모자 수 : " + num + "명<br>");
+	document.write("당첨자 : " );
+	
+	for(let i = 0; i <choice; i++){
+		var select = Math.floor((Math.random()*num)+1);
+		document.write(select + "번,");
+	}
+	
+	/*var now = new Date("2023-08-07");// 오늘 날짜를 객체로 지정
+	var diary = new Date("2022-11-27"); // 일기를 쓰기 시작한 날짜
+	
+	var toNow = now.getTime();
+	var toFirst = diary.getTime();
+	
+	var passTime = toNow - toFirst;
+	
+	passTime = Math.round(passTime/(1000*60*60*24)); // 밀리 초 계산(하루단위)
+	//쿼리 셀렉터는 스크립트 태그안에서의 값을 html body 태그안에 나타낼수있다.
+	document.querySelector('#result').innerText = passTime;
+	
+	/*var num = [1,2,3];
+	var chars = ["a","b","c","d"];
+	
+	var numChars = num.concat(chars);
+	var charsNum = chars.concat(num);	
+	
+	document.write("num에 chars를 합치면 : " + numChars+"<br> chars에 num을 합치면 : " + charsNum );
+	
+	var string1 = num.join();
+	document.write("구분자 없이 : ", string1);*/
+	
+	/*for(i=0; i<season.length;i++){
+		document.write("<p>" + season[i] + "</p>");
+	}*/
+	
+	/*var now = new Date();
+	document.write("현재 시간은 " + now.toLocalString());// 로컬형식으로 바꿔줌*/
+</script>
+</body>
+</html>
